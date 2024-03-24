@@ -2,38 +2,38 @@ import "./color.css";
 
 function Color() {
   const addr = "http://192.168.247.99";
-  var colorState = rgb(155,155,155);
 
   async function onClickEvent() {
     try {
-      var input = document.getElementById("button_switch");
-      console.log("data");
-      const response = await fetch(
-        `${addr}/color?color=${!colorState ? "1" : "0"}`
-      );
+      var colorState = document.getElementById("color-lamp");
+      console.log(colorState.value);
+      const response = await fetch(`${addr}/color?color=${colorState.value}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      const data = await response.json();
+      /*const data = await response.json();
       colorState = data.color;
-      innerText = colorState ? "ON" : "OFF";
-      button.classList.toggle("on", switchState);
-      console.log(data);
+      console.log(data);*/
       //alert("Успешно");
     } catch (error) {
       console.log(error);
     }
   }
   return (
-    <div>
-      <h1>Свет</h1>
-      <input id="lamp-color" type="color" name="lampColor" value="#e0e0e0">
+    <div className="color">
+      <h1>Цвет</h1>
+      <div className="SendColor">
+        <input id="color-lamp" type="color" className="color_lamp"></input>
+        <button className="Button_Send_Color" onClick={() => onClickEvent()}>
+          Отправить цвет
+        </button>
+      </div>
     </div>
   );
 }
 
 export default Color;
 
-
+//<input id="lamp-color" type="color" name="lampColor" value="#e0e0e0"></input>
 
 //<input id="lamp-color" type="color" name="lampColor" value="#e0e0e0">

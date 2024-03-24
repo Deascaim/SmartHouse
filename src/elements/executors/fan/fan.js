@@ -23,7 +23,7 @@ function Fan() {
     }
   }
   return (
-    <div>
+    <div className="fan">
       <h1>Вентилятор</h1>
       <button
         className="button"

@@ -3,9 +3,7 @@
   min-width: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(11, 112, 16);
+  background-color: rgb(57, 149, 185);
   margin: 10px auto;
   border-radius: 30px;
-  outline: auto;
-  outline-color: black;
 }

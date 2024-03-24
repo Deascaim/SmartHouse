@@ -30,7 +30,7 @@ function Humid() {
     }
   }
   return (
-    <div className="temp_section">
+    <div className="humid_section">
       <h2>Влажность</h2>
       <p>humid = {humid}</p>
     </div>

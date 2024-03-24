@@ -25,7 +25,7 @@ function Door() {
     }
   }
   return (
-    <div>
+    <div className="door">
       <h1>Дверь</h1>
       <button
         className="button"
